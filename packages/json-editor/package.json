@@ -1,0 +1,43 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "name": "@jse/json-editor",
+  "author": "nnecec",
+  "module": "dist/json-editor.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/json-editor.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/json-editor.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.6.0",
+    "size-limit": "^4.6.0",
+    "tsdx": "^0.14.0"
+  }
+}
